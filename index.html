@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="DKS Concrete - Locally crafted concrete dumbbells and strength equipment. Made in Zambia. Nationwide delivery." />
+<meta property="og:title" content="DKS Concrete" />
+<meta property="og:description" content="Concrete dumbbells and strength equipment, locally made in Zambia." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#111111" />
+<title>DKS Concrete | Build Strong. Stay Disciplined.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #111111;
+  --charcoal: #1c1c1c;
+  --smoke: #555;
+  --ash: #999;
+  --dust: #ccc;
+  --rule: #e4e4e4;
+  --white: #f9f9f7;
+  --gold: #b8975a;
+  --gold-dim: #9a7d47;
+  --display: 'Barlow Condensed', sans-serif;
+  --body: 'Inter', sans-serif;
+  --nav-h: 68px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body);
+  background: #ffffff;
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+::selection { background: var(--gold); color: #fff; }
+
+img { display: block; max-width: 100%; }
+
+a { text-decoration: none; color: inherit; }
+
+/* ---- UTILITIES ---- */
+.wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow {
+  font-family: var(--body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---- NAV ---- */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 90;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+#nav.solid {
+  background: rgba(17,17,17,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.logo {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin-left: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: #fff; }
+
+.nav-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold);
+  padding: 9px 18px;
+  transition: background 0.2s;
+}
+
+.nav-wa:hover { background: var(--gold-dim); }
+.nav-wa svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+#menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px;
+}
+
+#mob-nav {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: rgba(17,17,17,0.98);
+  padding: 20px 28px 28px;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 89;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+#mob-nav.open { display: flex; }
+
+#mob-nav a {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+#mob-nav a:last-child { border: none; }
+#mob-nav a:hover { color: #fff; }
+#mob-nav .mob-wa { color: var(--gold) !important; }
+
+/* ---- HERO ---- */
+#hero {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 72px;
+  padding-top: var(--nav-h);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.hero-bg img.in { opacity: 1; }
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.5) 55%, rgba(17,17,17,0.1) 100%),
+    linear-gradient(to top, rgba(17,17,17,0.65) 0%, transparent 45%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  margin-bottom: 22px;
+}
+
+.hero-h1 {
+  font-family: var(--display);
+  font-size: clamp(72px, 11vw, 148px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.hero-h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.hero-p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  max-width: 380px;
+  margin-bottom: 36px;
+}
+
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  background: #fff;
+  color: var(--black);
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-dark:hover { background: var(--white); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.06);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-gold:hover { background: var(--gold-dim); }
+
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-wa:hover { background: #1db954; }
+.btn-wa svg, .btn-ghost svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ---- PRODUCTS ---- */
+#products {
+  padding: 96px 0;
+  background: #fff;
+}
+
+.section-head {
+  margin-bottom: 48px;
+}
+
+.section-h2 {
+  font-family: var(--display);
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  margin: 10px 0 12px;
+}
+
+.section-sub {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--smoke);
+  max-width: 440px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1.5px solid var(--rule);
+  background: #fff;
+  color: var(--ash);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.filt:hover { border-color: var(--black); color: var(--black); }
+.filt.on { background: var(--black); border-color: var(--black); color: #fff; }
+
+/* Grid */
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.pcard {
+  border: 1px solid var(--rule);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.pcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.pcard-img {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f2f2f0;
+  position: relative;
+}
+
+.pcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s, transform 0.5s;
+}
+
+.pcard-img img.in { opacity: 1; }
+.pcard:hover .pcard-img img { transform: scale(1.04); }
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: var(--black);
+  color: #fff;
+}
+
+.badge-g { background: #2d6a4f; }
+
+.pcard-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pcard-cat {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.pcard-name {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--black);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+.pcard-detail {
+  font-size: 12px;
+  color: var(--ash);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.pcard-price {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.pcard-price small {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ash);
+}
+
+.pcard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px;
+  background: var(--black);
+  color: #fff;
+  transition: background 0.18s;
+}
+
+.pcard-btn:hover { background: var(--charcoal); }
+.pcard-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* ---- ABOUT ---- */
+#about {
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.about-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.about-img img.in { opacity: 1; }
+
+.about-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 50%, var(--black));
+}
+
+.about-copy {
+  padding: 72px 56px 72px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-h2 {
+  font-family: var(--display);
+  font-size: clamp(44px, 5.5vw, 76px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  margin: 12px 0 24px;
+}
+
+.about-h2 em { font-style: normal; color: var(--gold); }
+
+.about-p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.5);
+  max-width: 400px;
+  margin-bottom: 18px;
+}
+
+.about-rule {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 28px 0;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pillar {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pillar::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ---- CALCULATOR ---- */
+#calculator {
+  background: var(--charcoal);
+  padding: 96px 0;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.calc-h2 {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  margin: 12px 0 18px;
+}
+
+.calc-h2 span { color: var(--gold); }
+
+.calc-intro-p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.45);
+}
+
+.calc-panel {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 36px;
+}
+
+.step-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 12px;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.gbtn, .ebtn {
+  padding: 13px 10px;
+  border: 1.5px solid rgba(255,255,255,0.09);
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: center;
+}
+
+.gbtn:hover, .ebtn:hover {
+  border-color: rgba(184,151,90,0.5);
+  color: #fff;
+}
+
+.gbtn.on, .ebtn.on {
+  border-color: var(--gold);
+  background: rgba(184,151,90,0.1);
+  color: #fff;
+}
+
+.gbtn.full { grid-column: 1 / -1; }
+
+.exp-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.ebtn { flex: 1; }
+
+.result-box {
+  border: 1.5px solid var(--gold);
+  background: rgba(184,151,90,0.05);
+  padding: 22px;
+  display: none;
+}
+
+.result-box.show { display: block; }
+
+.result-range {
+  font-family: var(--display);
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.result-p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+}
+
+.result-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 11px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+}
+
+/* ---- CONTACT ---- */
+#contact {
+  background: var(--black);
+  padding: 96px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-h2 {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  margin: 12px 0 18px;
+}
+
+.contact-h2 span { color: var(--gold); }
+
+.contact-p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.45);
+  max-width: 340px;
+}
+
+.hours-block {
+  margin-top: 36px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 24px;
+}
+
+.hours-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 14px;
+}
+
+.hrow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.45);
+}
+
+.hrow span:last-child { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+.channels { display: flex; flex-direction: column; gap: 14px; }
+
+.channel {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ch-type {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.ch-val {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.ch-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 48px 0 32px;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 24px;
+}
+
+.foot-logo {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.foot-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.foot-blurb {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.3);
+  max-width: 220px;
+}
+
+.foot-col-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 16px;
+}
+
+.foot-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+
+.foot-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  transition: color 0.18s;
+}
+
+.foot-links a:hover { color: rgba(255,255,255,0.75); }
+
+.foot-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.foot-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.2);
+}
+
+.foot-legal { display: flex; gap: 18px; }
+
+.foot-legal a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.2);
+  transition: color 0.18s;
+}
+
+.foot-legal a:hover { color: rgba(255,255,255,0.5); }
+
+/* ---- FLOATING WA ---- */
+#wa-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#wa-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+}
+
+#wa-btn svg { width: 26px; height: 26px; color: #fff; }
+
+/* ---- SCROLL REVEAL ---- */
+.sr {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.sr.in { opacity: 1; transform: none; }
+.sr.d1 { transition-delay: 0.1s; }
+.sr.d2 { transition-delay: 0.2s; }
+.sr.d3 { transition-delay: 0.3s; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .pgrid { grid-template-columns: repeat(2, 1fr); }
+  #about { grid-template-columns: 1fr; }
+  .about-img { height: 360px; }
+  .about-img::after { background: linear-gradient(to top, var(--black) 0%, transparent 60%); }
+  .about-copy { padding: 52px 40px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 60px; }
+  .nav-links, .nav-wa { display: none; }
+  #menu-btn { display: block; }
+  .pgrid { grid-template-columns: 1fr; }
+  .calc-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .foot-grid { grid-template-columns: 1fr; gap: 24px; }
+  .foot-bottom { flex-direction: column; align-items: flex-start; }
+  .about-copy { padding: 40px 24px; }
+  #wa-btn { width: 48px; height: 48px; bottom: 18px; right: 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating WhatsApp -->
+<a id="wa-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+</a>
+
+<!-- Nav -->
+<header id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="logo" aria-label="DKS Concrete">DKS <span>Concrete</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-wa" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20order." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+      Order Now
+    </a>
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-nav">
+      <svg id="menu-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <line x1="2" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="2" y1="16" x2="20" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<nav id="mob-nav" aria-label="Mobile navigation">
+  <a href="#hero">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About</a>
+  <a href="#calculator">Calculator</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20order." class="mob-wa" target="_blank" rel="noopener">Order on WhatsApp</a>
+</nav>
+
+<main>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg">
+    <img
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1800&q=80&auto=format"
+      alt="Strength training gym"
+      loading="eager"
+      decoding="async"
+      id="hero-img"
+    />
+  </div>
+  <div class="hero-content wrap">
+    <p class="hero-tag eyebrow">Made in Zambia</p>
+    <h1 class="hero-h1">Build<br /><em>Strong.</em></h1>
+    <p class="hero-p">Heavy-duty concrete dumbbells and training equipment, locally crafted in Zambia. For athletes who train with intention.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-dark">Shop Equipment</a>
+      <a href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20place%20an%20order." class="btn-ghost" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        WhatsApp Order
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow sr">Equipment</p>
+      <h2 class="section-h2 sr d1">Training Weapons</h2>
+      <p class="section-sub sr d2">Built for real sessions. Choose your weight, place your order on WhatsApp.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filt on" data-f="all">All</button>
+      <button class="filt" data-f="dumbbells">Dumbbells</button>
+      <button class="filt" data-f="mats">Mats</button>
+      <button class="filt" data-f="supplements">Supplements</button>
+    </div>
+
+    <div class="pgrid" id="pgrid">
+
+      <article class="pcard sr" data-cat="dumbbells">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&auto=format" alt="Concrete dumbbell pair" loading="lazy" />
+          <span class="badge">Best Seller</span>
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Dumbbells</p>
+          <h3 class="pcard-name">Concrete Dumbbell Pair</h3>
+          <p class="pcard-detail">5kg to 30kg &mdash; High-grade concrete, steel-core handle. In stock. Ships nationwide.</p>
+          <p class="pcard-price"><small>From</small> K150</p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20order%20a%20concrete%20dumbbell%20pair.%20Please%20share%20available%20weights%20and%20pricing." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="pcard sr d1" data-cat="dumbbells">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1591291621164-2c6367723315?w=600&q=80&auto=format" alt="Single concrete dumbbell" loading="lazy" />
+          <span class="badge badge-g">In Stock</span>
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Dumbbells</p>
+          <h3 class="pcard-name">Single Dumbbell</h3>
+          <p class="pcard-detail">5kg to 30kg &mdash; Single unit. Available for same-week pickup in Lusaka.</p>
+          <p class="pcard-price"><small>From</small> K80</p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20order%20a%20single%20concrete%20dumbbell.%20What%20weights%20are%20available%3F" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="pcard sr d2" data-cat="mats">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=600&q=80&auto=format" alt="Training mat" loading="lazy" />
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Training Mats</p>
+          <h3 class="pcard-name">High-Density Grip Mat</h3>
+          <p class="pcard-detail">Multiple sizes &mdash; Non-slip, thick foam. Suitable for home and commercial gyms.</p>
+          <p class="pcard-price">K130 <small style="font-size:14px;">to K300</small></p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27m%20interested%20in%20your%20training%20mats.%20What%20sizes%20do%20you%20have%3F" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="pcard sr d3" data-cat="supplements">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80&auto=format" alt="Whey protein supplements" loading="lazy" />
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Supplements</p>
+          <h3 class="pcard-name">Whey Protein / Mass Gainer</h3>
+          <p class="pcard-detail">Multiple flavors &mdash; Premium muscle-building fuel. Message us for current stock and pricing.</p>
+          <p class="pcard-price" style="font-size:18px;font-weight:600;color:var(--ash);">Inquire for price</p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20know%20about%20your%20Whey%20Protein%20and%20Mass%20Gainer%20pricing." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Inquire on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="pcard sr" data-cat="supplements">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80&auto=format" alt="Performance supplements" loading="lazy" />
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Supplements</p>
+          <h3 class="pcard-name">Anabol &amp; Glutamine</h3>
+          <p class="pcard-detail">Recovery and performance stack &mdash; For intermediate and advanced lifters.</p>
+          <p class="pcard-price" style="font-size:18px;font-weight:600;color:var(--ash);">Inquire for price</p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20know%20about%20your%20Anabol%20and%20Glutamine%20stack." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Inquire on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <article class="pcard sr d1" data-cat="dumbbells">
+        <div class="pcard-img">
+          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80&auto=format" alt="Custom concrete weights" loading="lazy" />
+        </div>
+        <div class="pcard-body">
+          <p class="pcard-cat">Custom Orders</p>
+          <h3 class="pcard-name">Custom Weight Sets</h3>
+          <p class="pcard-detail">Any weight on request &mdash; Bulk orders for gyms and trainers welcome. Lead time on enquiry.</p>
+          <p class="pcard-price" style="font-size:18px;font-weight:600;color:var(--ash);">Custom pricing</p>
+          <a class="pcard-btn" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20discuss%20a%20custom%20weight%20set%20order." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Discuss Your Order
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="about-img">
+    <img
+      src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=900&q=80&auto=format"
+      alt="Athlete training with dumbbells"
+      loading="lazy"
+      id="about-img"
+    />
+  </div>
+  <div class="about-copy">
+    <p class="eyebrow sr">Our story</p>
+    <h2 class="about-h2 sr d1">Crafted<br />Here.<br /><em>Carried<br />Everywhere.</em></h2>
+    <div class="about-rule sr d2"></div>
+    <p class="about-p sr d2">DKS Concrete started with a simple conviction: good training equipment should not require importing anything. Zambia has the materials, the craftsmanship, and the drive. We just needed to put them together.</p>
+    <p class="about-p sr d3">Every dumbbell we make is cast, cured, and finished by hand. High-grade concrete, steel-core handles, no shortcuts.</p>
+    <div class="pillars sr d3">
+      <div class="pillar">Strength</div>
+      <div class="pillar">Durability</div>
+      <div class="pillar">Discipline</div>
+      <div class="pillar">Local pride</div>
+    </div>
+  </div>
+</section>
+
+<!-- Calculator -->
+<section id="calculator">
+  <div class="wrap">
+    <div class="calc-grid">
+      <div class="calc-intro">
+        <p class="eyebrow sr">Training tool</p>
+        <h2 class="calc-h2 sr d1">Find Your<br /><span>Weight.</span></h2>
+        <p class="calc-intro-p sr d2">Not sure where to start? Pick your goal and experience level and we'll point you to the right equipment.</p>
+      </div>
+      <div class="calc-panel sr d1">
+        <p class="step-label">Step 1 &mdash; Your goal</p>
+        <div class="goal-grid" id="goal-grid">
+          <button class="gbtn on" data-g="Lose Weight" aria-pressed="true">Lose Weight</button>
+          <button class="gbtn" data-g="Build Muscle" aria-pressed="false">Build Muscle</button>
+          <button class="gbtn" data-g="Tone Up" aria-pressed="false">Tone Up</button>
+          <button class="gbtn" data-g="Strength" aria-pressed="false">Strength</button>
+          <button class="gbtn full" data-g="General Fitness" aria-pressed="false">General Fitness</button>
+        </div>
+
+        <p class="step-label">Step 2 &mdash; Experience</p>
+        <div class="exp-row">
+          <button class="ebtn on" data-e="Beginner" aria-pressed="true">Beginner</button>
+          <button class="ebtn" data-e="Intermediate" aria-pressed="false">Intermediate</button>
+          <button class="ebtn" data-e="Advanced" aria-pressed="false">Advanced</button>
+        </div>
+
+        <div class="result-box" id="result-box" aria-live="polite">
+          <div class="result-range" id="r-range"></div>
+          <p class="result-p" id="r-protocol"></p>
+          <div class="result-chips" id="r-chips"></div>
+          <a class="btn-wa" id="r-wa" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Order These on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow sr">Get in touch</p>
+        <h2 class="contact-h2 sr d1">Ready<br />to <span>Train?</span></h2>
+        <p class="contact-p sr d2">Message us directly for orders, bulk enquiries, or custom requests. We respond fast.</p>
+        <div class="hours-block sr d3">
+          <p class="hours-title">Business Hours</p>
+          <div class="hrow"><span>Monday to Friday</span><span>8:00 AM to 6:00 PM</span></div>
+          <div class="hrow"><span>Saturday</span><span>9:00 AM to 3:00 PM</span></div>
+          <div class="hrow" style="border:none"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+      <div class="channels">
+        <div class="channel sr d1">
+          <p class="ch-type">WhatsApp</p>
+          <p class="ch-val">0973 884 602</p>
+          <p class="ch-sub">Fastest way to order. Direct and simple.</p>
+          <a class="btn-wa" href="https://wa.me/260973884602?text=Hi%20DKS%20Concrete%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.121 1.521 5.857L0 24l6.335-1.498A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.045-1.39l-.361-.215-3.763.89.937-3.652-.234-.374A9.782 9.782 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+            Message Us Now
+          </a>
+        </div>
+        <div class="channel sr d2">
+          <p class="ch-type">Email</p>
+          <p class="ch-val" style="font-size:15px;letter-spacing:0.01em;">dixonmulmbia4602@gmail.com</p>
+          <p class="ch-sub">For formal enquiries and bulk order agreements.</p>
+          <a class="btn-gold" href="mailto:dixonmulmbia4602@gmail.com?subject=DKS%20Concrete%20Enquiry" style="justify-content:center;">Send Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">DKS</div>
+        <div class="foot-tagline">Concrete</div>
+        <p class="foot-blurb">Locally crafted concrete dumbbells and strength equipment. Made in Zambia, delivered nationwide.</p>
+      </div>
+      <div>
+        <p class="foot-col-title">Navigation</p>
+        <ul class="foot-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-col-title">Products</p>
+        <ul class="foot-links">
+          <li><a href="#products">Concrete Dumbbells</a></li>
+          <li><a href="#products">Training Mats</a></li>
+          <li><a href="#products">Supplements</a></li>
+          <li><a href="https://wa.me/260973884602?text=Hi%20DKS%2C%20custom%20order%20enquiry." target="_blank" rel="noopener">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-col-title">Contact</p>
+        <ul class="foot-links">
+          <li><a href="https://wa.me/260973884602" target="_blank" rel="noopener">+260 973 884 602</a></li>
+          <li><a href="mailto:dixonmulmbia4602@gmail.com">dixonmulmbia4602@gmail.com</a></li>
+          <li><a href="https://dkconcretedumbbells.com" target="_blank" rel="noopener">dkconcretedumbbells.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">&copy; 2025 DKS Concrete Dumbbells. Built for Local Strength.</p>
+      <div class="foot-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* Nav scroll */
+  var nav = document.getElementById('nav');
+  function tick() { nav.classList.toggle('solid', window.scrollY > 20); }
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+
+  /* Active nav link */
+  var secs = document.querySelectorAll('section[id]');
+  var nlinks = document.querySelectorAll('#nav .nav-links a');
+  function setActive() {
+    var y = window.scrollY + 100;
+    var cur = '';
+    secs.forEach(function (s) { if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) cur = s.id; });
+    nlinks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  }
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  /* Mobile nav */
+  var menuBtn = document.getElementById('menu-btn');
+  var mobNav = document.getElementById('mob-nav');
+  var open = false;
+  function toggleNav() {
+    open = !open;
+    mobNav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  menuBtn.addEventListener('click', toggleNav);
+  mobNav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (open) toggleNav(); }); });
+
+  /* Hero image fade */
+  var hi = document.getElementById('hero-img');
+  if (hi) { (hi.complete ? function () { hi.classList.add('in'); } : function () { hi.addEventListener('load', function () { hi.classList.add('in'); }); })(); }
+
+  /* Lazy images */
+  document.querySelectorAll('.pcard-img img, .about-img img').forEach(function (img) {
+    if (img.complete && img.naturalWidth) { img.classList.add('in'); }
+    else { img.addEventListener('load', function () { img.classList.add('in'); }); }
+  });
+
+  /* Scroll reveal */
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('.sr').forEach(function (el) { obs.observe(el); });
+
+  /* Product filter */
+  var filts = document.querySelectorAll('.filt');
+  var cards = document.querySelectorAll('#pgrid .pcard');
+  filts.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filts.forEach(function (b) { b.classList.remove('on'); });
+      btn.classList.add('on');
+      var f = btn.getAttribute('data-f');
+      cards.forEach(function (c) { c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none'; });
+    });
+  });
+
+  /* Calculator */
+  var DATA = {
+    'Lose Weight': {
+      Beginner:     { range: '5kg to 10kg', text: 'Higher reps (15 to 20) with lighter weights. Elevate your heart rate and build the habit first.', products: ['5kg Pair', '10kg Pair', 'Grip Mat'] },
+      Intermediate: { range: '8kg to 15kg', text: 'Circuit training with 12 to 15 reps per set. Keep rest short to maintain intensity.', products: ['10kg Pair', '15kg Pair', 'Grip Mat'] },
+      Advanced:     { range: '12kg to 20kg', text: 'HIIT-style dumbbell complexes. 10 to 15 reps, minimal rest, caloric deficit alongside.', products: ['15kg Pair', '20kg Pair', 'Grip Mat'] }
+    },
+    'Build Muscle': {
+      Beginner:     { range: '10kg to 20kg', text: '8 to 12 reps, controlled tempo. Compound movements: rows, presses, RDLs. 60 to 90 seconds rest.', products: ['10kg Pair', '15kg Pair', '20kg Pair'] },
+      Intermediate: { range: '15kg to 25kg', text: 'Progressive overload is key. Add weight when you hit the top of your rep range for two sessions running.', products: ['15kg Pair', '20kg Pair', '25kg Pair'] },
+      Advanced:     { range: '20kg to 30kg+', text: '6 to 8 heavy reps per set, supplement with isolation work at higher reps. Consider a full set.', products: ['20kg to 30kg Set', 'Whey Protein', 'Custom Order'] }
+    },
+    'Tone Up': {
+      Beginner:     { range: '5kg to 12kg', text: 'Slow, controlled movements. 12 to 15 reps, 3 to 4 sets. Mind-muscle connection over heavy load.', products: ['5kg Pair', '10kg Pair', 'Grip Mat'] },
+      Intermediate: { range: '10kg to 18kg', text: 'Superset opposing muscle groups to increase time under tension and cut session length.', products: ['10kg Pair', '15kg Pair', 'Grip Mat'] },
+      Advanced:     { range: '12kg to 22kg', text: 'Drop sets and tempo work. Heavy for 8, drop immediately and grind out 12 more.', products: ['15kg Pair', '20kg Pair', 'Whey Protein'] }
+    },
+    'Strength': {
+      Beginner:     { range: '15kg to 25kg', text: '4 to 6 reps, maximal intent, 2 to 3 minutes rest. Build your base before chasing heavier loads.', products: ['15kg Pair', '20kg Pair', '25kg Pair'] },
+      Intermediate: { range: '22kg to 30kg', text: 'Heavy presses, rows, and carries. 3 to 5 reps per set, fully recovered between each.', products: ['25kg Pair', '30kg Pair', 'Whey Protein'] },
+      Advanced:     { range: '28kg to 30kg+', text: 'You need maximal load across all patterns. Consider a custom order beyond 30kg.', products: ['30kg Pair', 'Custom Order', 'Anabol & Glutamine'] }
+    },
+    'General Fitness': {
+      Beginner:     { range: '5kg to 15kg', text: 'Covers most exercises in a full-body programme. 10 to 15 reps, push, pull, hinge, carry.', products: ['5kg Pair', '10kg Pair', 'Grip Mat'] },
+      Intermediate: { range: '10kg to 20kg', text: 'Mix strength work and conditioning. 8 to 12 reps, three days a week, structured programme.', products: ['10kg Pair', '15kg Pair', '20kg Pair'] },
+      Advanced:     { range: '15kg to 30kg', text: 'Build a full home gym. Alternating heavy and volume weeks for consistent long-term results.', products: ['Full Set', 'Grip Mat', 'Whey Protein'] }
+    }
+  };
+
+  var goal = 'Lose Weight';
+  var exp = 'Beginner';
+
+  var gBtns = document.querySelectorAll('.gbtn');
+  var eBtns = document.querySelectorAll('.ebtn');
+  var rBox = document.getElementById('result-box');
+  var rRange = document.getElementById('r-range');
+  var rProt = document.getElementById('r-protocol');
+  var rChips = document.getElementById('r-chips');
+  var rWA = document.getElementById('r-wa');
+
+  function renderCalc() {
+    var d = DATA[goal][exp];
+    rRange.textContent = d.range;
+    rProt.textContent = d.text;
+    rChips.innerHTML = '';
+    d.products.forEach(function (p) {
+      var s = document.createElement('span');
+      s.className = 'chip';
+      s.textContent = p;
+      rChips.appendChild(s);
+    });
+    rBox.classList.add('show');
+    rWA.href = 'https://wa.me/260973884602?text=' + encodeURIComponent('Hi DKS Concrete, I used your calculator. Goal: ' + goal + ', experience: ' + exp + '. Recommended: ' + d.range + '. Products: ' + d.products.join(', ') + '. Please confirm availability and pricing.');
+  }
+
+  gBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      gBtns.forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+      b.classList.add('on'); b.setAttribute('aria-pressed', 'true');
+      goal = b.getAttribute('data-g');
+      renderCalc();
+    });
+  });
+
+  eBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      eBtns.forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+      b.classList.add('on'); b.setAttribute('aria-pressed', 'true');
+      exp = b.getAttribute('data-e');
+      renderCalc();
+    });
+  });
+
+  renderCalc();
+
+}());
+</script>
+</body>
+</html>
